@@ -155,6 +155,34 @@ ul li a:hover {
   background: var(--highlight-color);
 }
 
+#home {
+  display: flex;
+  padding: 24px 0;
+  font-size: 24px;
+  justify-content: center;
+}
+
+#home a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  border-radius: 8px;
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  transition: background 0.2s;
+  border-radius: 50%;
+}
+
+#home a:hover {
+  background: var(--highlight-color);
+}
+
 /* media queries */
 @media (min-width: 700px) {
   :root {
