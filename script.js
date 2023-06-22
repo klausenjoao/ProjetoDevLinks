@@ -1,16 +1,19 @@
+// Função para alternar o tema
 function toggleMode() {
-  const html = document.documentElement
-  html.classList.toggle("light")
+  var body = document.body;
+  body.classList.toggle("light");
 
-  // pegar a tag img
-  const img = document.querySelector("#profile img")
+  // Verifica se o tema atual é light
+  var isLightMode = body.classList.contains("light");
 
-  // substituir a imagem
-  if (html.classList.contains("light")) {
-    // se tiver light mode, adicionar a imagem light
-    img.setAttribute("src", "./assets/Avatar.png")
-  } else {
-    // set tiver sem light mode, manter a imagem normal
-    img.setAttribute("src", "./assets/Avatar.png")
-  }
+  // Guarda a preferência do usuário no localStorage
+  localStorage.setItem("theme", isLightMode ? "light" : "dark");
+}
+
+// Verifica se há uma preferência de tema no localStorage
+var theme = localStorage.getItem("theme");
+
+// Se houver uma preferência, aplica o tema correspondente
+if (theme === "light") {
+  document.body.classList.add("light");
 }

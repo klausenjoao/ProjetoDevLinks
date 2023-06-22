@@ -14,7 +14,7 @@
   --switch-bg-url: url(./assets/moon-stars.svg);
 }
 
-.light {
+body.light {
   --text-color: black;
   --bg-url: url(./assets/bg-mobile-white.jpg);
   --stroke-color: rgba(0, 0, 0, 0.5);
@@ -76,11 +76,11 @@ body * {
   z-index: 1;
   transform: translateY(-50%);
 
-  animation: slide-back 0.2s;
+  animation: slide-back 0s;
 }
 
-.light #switch button {
-  animation: slide-in 0.2s forwards;
+body.light #switch button {
+  animation: slide-in 0s forwards;
 }
 
 #switch button:hover {
@@ -190,7 +190,7 @@ ul li a:hover {
     --bg-url: url(./assets/bg-desktop.jpg);
   }
 
-  .light {
+  body.light {
     --bg-url: url(./assets/bg-desktop-light.jpg);
   }
 }
